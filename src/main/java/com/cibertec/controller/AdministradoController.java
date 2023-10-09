@@ -14,27 +14,26 @@ import com.cibertec.service.AdministradoService;
 
 @Controller
 public class AdministradoController {
-	
+
 	@Autowired
 	public AdministradoService service;
-	
+
 	@GetMapping(value = "/verAdmi")
 	public String ver() {
 		return "RegistroAdmi";
 	}
-	
+
 	@PostMapping("/registroAdmi")
 	@ResponseBody
-	public Map<?, ?> registra(Administrado admi){
-		HashMap<String,String> map= new HashMap<String,String>();
+	public Map<?, ?> registra(Administrado admi) {
+		HashMap<String, String> map = new HashMap<String, String>();
 		service.registroAdmi(admi);
-		if(admi==null) {
-			map.put("MENSAJE","Error en el registro");
-		}
-		else{
-				map.put("MENSAJE", "Administrado registrado Correctamente");
+		if (admi == null) {
+			map.put("MENSAJE", "Error en el registro");
+		} else {
+			map.put("MENSAJE", "Administrado registrado Correctamente");
 		}
 		return map;
 	}
-	
+
 }
