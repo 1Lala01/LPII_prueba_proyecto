@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,93 +10,111 @@
 <script type="text/javascript" src="js/global.js"></script>
 <title>Insert title here</title>
 </head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
- 
-<body>
-	
-<div class="container">
-<h1>Registra Administrado</h1>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrapValidator.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
 
-	<form id="id_form"> 
-		<div class="row" style="margin-top: 5%">
-			<div class="form-group col-sm-6">
-				<div class="col-sm-4">
-					<label class="control-label" for="nombre">Nombre</label>
+<link rel="stylesheet" href="css/bootstrap.css"/>
+<link rel="stylesheet" href="css/bootstrapValidator.css"/>
+<body>
+
+	<div class="container">
+		<h1>Registra Administrado</h1>
+
+		<form id="id_form">
+			<div class="row" style="margin-top: 5%">
+				<div class="form-group col-sm-6">
+					<div class="col-sm-4">
+						<label class="control-label" for="nombre">Nombre</label>
+					</div>
+					<div class="col-sm-8">
+						<input class="form-control" type="text" id="id_nombre"
+							name="nombre" placeholder="Ingrese el nombre" maxlength="40">
+					</div>
 				</div>
-				<div class="col-sm-8">
-					<input class="form-control" type="text" id="id_nombre" name="nombre" placeholder="Ingrese el nombre" maxlength="40">
-				</div>
-			</div>
-			<div class="form-group  col-sm-6">
-				<div class="col-sm-4">
-					<label class="control-label" for="id_apellido">apellido</label>
-				</div>
-				<div class="col-sm-6">
-					<input class="form-control" type="text" id="id_apellido" name="apellido" placeholder="Ingrese el apellido" maxlength="8">
-		 		</div>
-			</div>
-		</div>
-		<div class="row" style="margin-top: 0%">
-			<div class="form-group col-sm-6">
-				<div class="col-sm-4">
-					<label class="control-label" for="id_genero">Genero</label>
-				</div>
-				<div class="col-sm-8">
-					<input class="form-control" type="text" id="id_genero" name="genero" placeholder="Ingrese el genero" maxlength="100">
-				</div>
-			</div>
-			<div class="form-group  col-sm-6">
-				<div class="col-sm-4">
-					<label class="control-label" for="id_fecha">Fecha de Nacimiento</label>
-				</div>
-				<div class="col-sm-6">
-					<input class="form-control" type="date" id="id_fecha" name="fechanac" placeholder="Ingrese la fecha" maxlength="100">
-		 		</div>
-			</div>
-		</div>
-		<div class="row" style="margin-top: 0%">
-			<div class="form-group col-sm-6">
-				<div class="col-sm-4">
-					<label class="control-label" for="id_telefono">Telefono</label>
-				</div>
-				<div class="col-sm-8">
-					<input class="form-control" type="text" id="id_telefono" name="telefono" placeholder="Ingrese el correo" maxlength="100">
+				<div class="form-group  col-sm-6">
+					<div class="col-sm-4">
+						<label class="control-label" for="id_apellido">apellido</label>
+					</div>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" id="id_apellido"
+							name="apellido" placeholder="Ingrese el apellido" maxlength="8">
+					</div>
 				</div>
 			</div>
-			<div class="form-group col-sm-6">
-				<div class="col-sm-4">
-					<label class="control-label" for="id_correo">Correo</label>
+			<div class="row" style="margin-top: 0%">
+				<div class="form-group col-sm-6">
+					<div class="col-sm-4">
+						<label class="control-label" for="id_genero">Genero</label>
+					</div>
+					<div class="col-sm-8">
+						<input class="form-control" type="text" id="id_genero"
+							name="genero" placeholder="Ingrese el genero" maxlength="100">
+					</div>
 				</div>
-				<div class="col-sm-8">
-					<input class="form-control" type="text" id="id_correo" name="correo" placeholder="Ingrese el correo" maxlength="100">
+				<div class="form-group  col-sm-6">
+					<div class="col-sm-4">
+						<label class="control-label" for="id_fecha">Fecha de
+							Nacimiento</label>
+					</div>
+					<div class="col-sm-6">
+						<input class="form-control" type="date" id="id_fecha"
+							name="fechanac" placeholder="Ingrese la fecha" maxlength="100">
+					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="row" style="margin-top: 2%" align="center"	>
-				<button id="id_registrar" type="button" class="btn btn-primary" >Crea Alumno</button>
-		</div>	
-	</form>
-</div>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-<script type="text/javascript">
+			<div class="row" style="margin-top: 0%">
+				<div class="form-group col-sm-6">
+					<div class="col-sm-4">
+						<label class="control-label" for="id_telefono">Telefono</label>
+					</div>
+					<div class="col-sm-8">
+						<input class="form-control" type="text" id="id_telefono"
+							name="telefono" placeholder="Ingrese el correo" maxlength="100">
+					</div>
+				</div>
+				<div class="form-group col-sm-6">
+					<div class="col-sm-4">
+						<label class="control-label" for="id_correo">Correo</label>
+					</div>
+					<div class="col-sm-8">
+						<input class="form-control" type="text" id="id_correo"
+							name="correo" placeholder="Ingrese el correo" maxlength="100">
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="margin-top: 2%" align="center">
+				<button id="id_registrar" type="button" class="btn btn-primary">Crea
+					Alumno</button>
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
 
 $("#id_registrar").click(function (){ 
+	
+	var validator = $('#id_form').data('bootstrapValidator');
+	validator.validate();
+	
+	if (validator.isValid()){
 	$.ajax({
 		type:"POST",
 		url:"registroAdmi",
 		data:$('#id_form').serialize(),
 		success: function(data){
-			
+			mostrarMensaje(data.MENSAJE);
 		},
 		erro:function(){
-			
+			mostrarMensaje(data.MSG_ERROR);
 		}
 		
 	});
-
+	}
 });
+
 
 
 function limpiar(){
@@ -193,6 +211,6 @@ $(document).ready(function() {
     
 });
 </script>
-	
+
 </body>
 </html>
